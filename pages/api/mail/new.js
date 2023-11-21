@@ -13,19 +13,19 @@ export default cors(async function handler(req, res) {
 
         const { name, email, subject, message } = req.body;
 
-        // Replace these with your actual email service settings
+
         const transporter = nodemailer.createTransport({
             service: "Gmail",
             auth: {
-                user: process.env.FROM_EMAIL_ADDRESS,
-                pass: process.env.FROM_EMAIL_PASS,
+                user: "rn.dubey786@gmail.com",
+                pass: "ybdl totu kebd qqpf",
             },
         });
 
         const mailOptions = {
-            from: process.env.FROM_EMAIL_ADDRESS,
+            from: "aryanbaba4199@gmail.com",
             to: process.env.TO_EMAIL_PASS,
-            subject : "This Mail is coming from Portfolio Web app",
+            subject,
             text: `name = ${name}, email = ${email}, message = ${message}`
         };
 
