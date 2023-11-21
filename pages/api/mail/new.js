@@ -17,13 +17,13 @@ export default cors(async function handler(req, res) {
         const transporter = nodemailer.createTransport({
             service: "Gmail",
             auth: {
-                user: "rn.dubey786@gmail.com",
-                pass: "ybdl totu kebd qqpf",
+                user: process.env.FROM_EMAIL_ADDRESS,
+                pass: process.env.FROM_EMAIL_PASS,
             },
         });
 
         const mailOptions = {
-            from: "aryanbaba4199@gmail.com",
+            from: process.env.FROM_EMAIL_ADDRESS,
             to: process.env.TO_EMAIL_PASS,
             subject,
             text: `name = ${name}, email = ${email}, message = ${message}`
