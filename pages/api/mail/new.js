@@ -3,8 +3,11 @@ import nodemailer from "nodemailer";
 
 import { connectDb } from "@/database/connect";
 import { Mail } from "@/models/mail";
+import Cors from 'micro-cors';
 
-export default async function handler(req, res) {
+const cors = Cors();    
+
+export default cors(async function handler(req, res) {
     connectDb()
     if (req.method === "POST") {
 
@@ -40,4 +43,4 @@ export default async function handler(req, res) {
     } else {
         res.status(405).json({ error: "Method not allowed" });
     }
-}
+})
