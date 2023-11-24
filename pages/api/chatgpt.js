@@ -13,9 +13,9 @@ export default async function handler(req, res) {
             url: "https://chatgpt-api8.p.rapidapi.com/",
             headers: {
                 "content-type": "application/json",
-                "X-RapidAPI-Key": process.env.RAPID_API_KEY,
+                "X-RapidAPI-Key": process.env.RAK_GPT,
                 "X-RapidAPI-Host": "chatgpt-api8.p.rapidapi.com",
-            },
+            }, 
             data: [
                 {
                     content: query,

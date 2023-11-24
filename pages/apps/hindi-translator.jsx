@@ -33,7 +33,7 @@ const HindiTranslator = () => {
   return (
     <Fragment>
       <Head>
-        <title>Hindi-Translator</title>
+        <title>English To Hindi Translator</title>
       </Head>
 
       <Theme>
@@ -41,8 +41,12 @@ const HindiTranslator = () => {
 
         <div className="md:px-[20%] px-[3%] dark:bg-gray-900 min-h-[92vh]">
           <h1 className="text-3xl font-bold text-center pt-5">
-            Hindi Translator
+            Translator
           </h1>
+          <h2 className="text-1xl font-bold text-center pt-5">
+            ( English to Hindi )
+          </h2>
+
 
           <div className="mt-8">
             <div className="flex">
