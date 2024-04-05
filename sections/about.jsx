@@ -5,7 +5,7 @@ import { FaBlackTie, FaUserCheck } from "react-icons/fa";
 import { ImLocation } from "react-icons/im";
 import { IoPerson } from "react-icons/io5";
 import { BsMenuAppFill } from "react-icons/bs";
-
+import My from "../public/images/mydp.jpg"
 const About = () => {
   const [isAbout, setIsAbout] = useState(false);
 
@@ -54,14 +54,14 @@ const About = () => {
         </h2>
         <div className='pb-[30px] px-[20px] md:px-[100px] lg:px-[200px] md:flex gap-[50px]'>
           {/* Person Image */}
-          <img
+          <Image
             alt='about image'
             className={
               "shadow-zinc-300 dark:shadow-zinc-700 shadow-sm transition-all duration-700 translate-x-[-900px] bg-blue-200 m-auto bg-cover bg-no-repeat max-h-[500px] rounded object-contain"
             }
             
             ref={profile2Ref}
-            src='https://scontent.fdbd1-3.fna.fbcdn.net/v/t39.30808-6/318585499_2076254815897457_3414266196112879061_n.jpg?_nc_cat=103&ccb=1-7&_nc_sid=5f2048&_nc_ohc=GxVC1bf4RLgAX-YJI_a&_nc_ht=scontent.fdbd1-3.fna&oh=00_AfADQO1r96Uy5OgMitsbr7inZFtWRKy5z0YYru-mV14_YQ&oe=65602DD3'
+            src={My}
             width={300}
             height={300}
           />
@@ -131,7 +131,7 @@ const About = () => {
                   </p>
                 </div>
                 <p className='text-center md:text-left text-[#c72c6c] dark:text-[#07d0e5]'>
-                  5{" "}
+                  25{" "}
                 </p>
               </div>
             </div>

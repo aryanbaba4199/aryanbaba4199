@@ -64,12 +64,6 @@ export const TechStackData = [
         name: "Github",
         icon: <BsGithub className="md:text-4xl text-2xl" color="#c9d1d9" />
       },
-    ],
-    Good: [
-      {
-        name : "DSA" ,
-        icon : <SiThealgorithms className="md:text-4xl text-2xl" color="#4caf50" />
-      },
       {
         name: "NodeJS",
         icon: <SiNodedotjs className="md:text-4xl text-2xl" color="#4caf50" />,
@@ -82,6 +76,13 @@ export const TechStackData = [
         name: "MongoDB",
         icon: <DiMongodb className="md:text-4xl text-2xl" color="#4caf50" />,
       },
+    ],
+    Good: [
+      {
+        name : "DSA" ,
+        icon : <SiThealgorithms className="md:text-4xl text-2xl" color="#4caf50" />
+      },
+      
       {
         name: "firebase",
         icon: <SiFirebase className="md:text-4xl text-2xl" color="#ffcd33" />
@@ -98,20 +99,9 @@ export const TechStackData = [
         name: "Git",
         icon: <BsGit className="md:text-4xl text-2xl" color="#f4511e" />
       },
-
-    ],
-    Familiar: [
       {
         name: "TypeScript",
         icon: <SiTypescript className="md:text-4xl text-2xl" color="#377cc8" />
-      },
-      {
-        name: "Angular",
-        icon: <FaAngular className="md:text-4xl text-2xl" color="#c50836" />
-      },
-      {
-        name: "React Native",
-        icon: <TbBrandReactNative className="md:text-4xl text-2xl" color="#66dbfb" />
       },
       {
         name: "Python",
@@ -121,6 +111,19 @@ export const TechStackData = [
         name: "JAVA",
         icon: <FaJava className="md:text-4xl text-2xl"/>
       },
+
+    ],
+    Familiar: [
+      
+      {
+        name: "Angular",
+        icon: <FaAngular className="md:text-4xl text-2xl" color="#c50836" />
+      },
+      {
+        name: "React Native",
+        icon: <TbBrandReactNative className="md:text-4xl text-2xl" color="#66dbfb" />
+      },
+      
       {
         name: "SASS",
         icon: <DiSass className="md:text-4xl text-2xl" color="#f06292" />,
