@@ -72,7 +72,7 @@ const Home = () => {
           <SendMail />
           {/* Footer */}
           <Footer />
-          <div className="z-40">
+          <div className="">
             {/* tawk.to Chat System */}
             <ChatSystem />
           </div>
