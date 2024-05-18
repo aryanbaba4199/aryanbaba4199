@@ -34,7 +34,7 @@ const Footer = () => {
               className=" flex flex-col justify-center items-center
             shadow-lg shadow-red-600 px-8 py-2  duration-500 mt-4 hover:ease-in-out hover:transform hover:text-3xl hover:text-black hover:bg-white"
             >
-              <Link href="https://www.instagram.com/aryan_dubey_rn/">
+              <Link href="mailto:aryanbaba4199@gmail.com">
                 <MdEmail className="text-3xl my-1 text-pink-600" />
                 <p className="font-semibold my-1">Email</p>
               </Link>
