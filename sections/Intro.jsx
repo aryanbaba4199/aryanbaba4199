@@ -3,6 +3,7 @@ import React, { Fragment, useEffect, useRef, useState } from "react";
 import Head from "next/head";
 import Link from "next/link";
 
+
 const Intro = () => {
   const [isHome, setIsHome] = useState(false);
 
@@ -94,6 +95,7 @@ const Intro = () => {
           />
         </div>
       </section>
+      
     </Fragment>
   );
 };

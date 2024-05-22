@@ -8,6 +8,7 @@ import { Analytics } from "@vercel/analytics/react"
 import { PortfolioProvider } from "@/contextApi/PortfolioContext"
 import ThemeProvider from "@/context/themeContext"
 
+
 // ReactGA.initialize(process.env.NEXT_PUBLIC_MEASUREMENT_ID);
 
 
@@ -16,6 +17,7 @@ export default function App({ Component, pageProps }) {
   return (
     <PortfolioProvider>
       <ThemeProvider>
+       
         <Component {...pageProps} />
         <Analytics />
       </ThemeProvider>

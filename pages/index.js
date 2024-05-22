@@ -4,6 +4,8 @@ import dynamic from "next/dynamic";
 import About from "@/sections/about";
 import Education from "@/sections/education";
 import Experience from "@/sections/experience";
+import StarsCanvas from "@/components/starcanvas"
+
 const Navbar = dynamic(() => import("@/layout/navbar/Navbar"))
 const Footer = dynamic(() => import("@/layout/footer/Footer"))
 const Intro = dynamic(() => import("@/sections/Intro"))
@@ -12,9 +14,10 @@ const Projects = dynamic(() => import("@/sections/Projects"))
 const LatestBlogs = dynamic(() => import("@/sections/LatestBlogs"))
 const Apps = dynamic(() => import("@/sections/Apps"))
 const SendMail = dynamic(() => import("@/utils/SendMail"))
-const SocialMedia = dynamic(() => import("@/utils/SocialMedia"))
+
 const ChatSystem = dynamic(() => import("@/utils/ChatSystem"))
-const Feedback = dynamic(() => import("@/utils/Feedback"))
+
+
 
 const Home = () => {
 
@@ -44,12 +47,14 @@ const Home = () => {
         <link href="favicon.ico" rel="icon" type="image/x-icon" />
 
       </Head>
-      <div>
-        <div>
+      <div className="relative">
+      <StarsCanvas />
+        <div className="relative z-10">
           {/* Desktop Navbar */}
           <Navbar />
           {/* Welcome Page */}
           <Intro />
+          
           {/* About */}
           <About />
           {/* Skills  */}
@@ -62,7 +67,7 @@ const Home = () => {
           {/* Projects */}
           <Projects />
           {/* SocialMedia */}
-          <SocialMedia />
+          
 
           {/* LatestBlog */}
           <LatestBlogs />
@@ -76,10 +81,10 @@ const Home = () => {
             {/* tawk.to Chat System */}
             <ChatSystem />
           </div>
-          {/* Feedback Modal */}
-          <Feedback />
           
+         
           
+        
         </div>
       </div>
     </Fragment>

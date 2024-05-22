@@ -1,20 +1,20 @@
 export const ExperienceData = [
   {
     companyName: "FreeLancer",
-    location: "stylers.in",
-    role: "E-Commerce Web App",
+    location: "Remote",
+    role: "Full Stack Developer | MERN Stack Developer",
+    fromTo : "From 01 October 2023",
 
-    description:
-      `I conceptualized and developed a dynamic E-commerce Web App, providing clients with a powerful platform to showcase and sell their products online. This comprehensive solution integrates robust backend functionalities with an intuitive front-end, ensuring a satisfying shopping experience for users.`,
+    
     side: "left",
   },
   {
-    companyName: "FreeLancer",
-    location: "dreamplanner.in",
-    role: "Event Booking App",
+    companyName: "Riya Technology",
+    location: "Patna, Bihar",
+    role: "MERN Stack Developer",
 
-    description:
-      "I spearheaded the development of a robust Event Booking Web App tailored to streamline event management for clients. This dynamic platform enables users to effortlessly browse, select, and book events of their choice. The application integrates a user-friendly interface with secure payment gateways, ensuring a seamless and trustworthy booking experience",
+    fromTo:
+     "From 01 Feb 2022 to 31 August 2023",
     side: "right",
   },
   

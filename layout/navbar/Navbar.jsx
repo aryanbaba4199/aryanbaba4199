@@ -40,6 +40,11 @@ const Navbar = () => {
     };
   }, []);
 
+
+
+
+
+  
   return (
     <Fragment>
       {/* Desktop Header */}
@@ -64,6 +69,7 @@ const Navbar = () => {
               </div>
             </Link>
           ))}
+          
         </div>
         {/* Toggle Theme button */}
         <div className='flex items-center gap-4'>
