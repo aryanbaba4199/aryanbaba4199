@@ -66,6 +66,10 @@ const Intro = () => {
                 developer <span className='text-white'>|</span>
               </span>
             </p>
+            <div className="w-[50%]">
+            <p>Highly motivated Full-Stack Developer ( MERN Stack Developer ) with 3+ years of experience.</p>
+            <p></p>
+            </div>
             <div className='mt-5 md:mt-10 flex gap-3'>
               {/* Hire Me Button */}
               <Link
