@@ -115,10 +115,7 @@ const Footer = () => {
               </Link>
             </div>
           </div>
-          <div className="mt-16 flex justify-end items-center text-gray-500 px-5">
-              <p>Developd by Raushan Kumar : +919835776768 </p>
-              
-          </div>
+          
         </div>
       </>
     </Fragment>

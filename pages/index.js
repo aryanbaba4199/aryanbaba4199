@@ -5,6 +5,7 @@ import About from "@/sections/about";
 import Education from "@/sections/education";
 import Experience from "@/sections/experience";
 import StarsCanvas from "@/components/starcanvas"
+import Features from "@/components/feature";
 
 const Navbar = dynamic(() => import("@/layout/navbar/Navbar"))
 const Footer = dynamic(() => import("@/layout/footer/Footer"))
@@ -52,11 +53,14 @@ const Home = () => {
         <div className="relative z-10">
           {/* Desktop Navbar */}
           <Navbar />
+          
           {/* Welcome Page */}
           <Intro />
           
           {/* About */}
           <About />
+          <Footer />
+          <Features/>
           {/* Skills  */}
           <Skills />
           {/* Education */}
@@ -83,7 +87,10 @@ const Home = () => {
           </div>
           
          
-          
+          <div className=" flex justify-end items-center text-gray-500 px-5 py-4">
+              <p>Developd by Raushan Kumar : +919835776768 </p>
+              
+          </div>
         
         </div>
       </div>
