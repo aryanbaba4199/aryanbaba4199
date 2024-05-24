@@ -1,25 +1,29 @@
 import React, { useState } from 'react';
 import axios from 'axios';
-import mongoose from 'mongoose';
+import { Dialog } from '@mui/material';
 
 const AuthForm = () => {
     const [name, setName] = useState("");
     const [email, setEmail] = useState("");
     const [pswd, setPswd] = useState("");
     const [user, setUser] = useState(null);
-    const [message, SetMessage] = us
+    const [status, setStatus] = useState("");
+    
 
     const handleSignIn = async (e) => {
         e.preventDefault();
         try {
             const response = await axios.post('/api/user', { email, pswd });
             if(response.status===200){
+                setStatus(response.status);
                 setUser(response.data);
             }else if(response.status===300){
                 setUser("Already Registered Try to sign in");
+                setStatus(response.status);
             }
         } catch (error) {
             setUser(error.message);
+            setStatus("500");
         }
     };
 
@@ -59,6 +63,14 @@ const AuthForm = () => {
                     </form>
                 </div>
             </div>
+            <Dialog open = {status=="200"} >
+                <div className='px-16 py-4 bg-black text-white'>
+                    <div>
+                        <p>Authentication Successful</p>
+                        <p>{user}</p>
+                    </div>
+                </div>
+            </Dialog>
         </>
     );
 };
