@@ -4,12 +4,14 @@ import LocalAuth from './auth/localAuth';
 import FireAuth from './auth/fireAuth';
 import SupaAuth from './auth/supabaseAuth';
 import { useRouter } from 'next/router';
+import Weather from './Weather/weather';
 
 const Feature = () => {
     const router = useRouter();
     const [open, setOpen] = useState(false);
     const [fire, setFire] = useState(false);
     const [supa, setSupa] = useState(false);
+    const [weather, setWeather] = useState(true);
     const [localAuth, setLocAuth] = useState(false);
     
     const handleOpen = () => {
@@ -35,9 +37,13 @@ const Feature = () => {
         router.push("https://razorpay.me/@stylers")
     };
 
+    const handleWeather = () =>{
+        setWeather(true);
+    }
+
     return (
         <>
-            <div className='flex flex-col justify-center items-center px-2 py-8'>
+            <div className='flex flex-col justify-center items-center px-2 py-8 border mx-8'>
                 <div>
                     <p className='font-serif font-bold text-3xl'>Features</p>
                 </div>
@@ -54,6 +60,12 @@ const Feature = () => {
                             className='shadow-lg shadow-red-600 px-8 rounded-md hover:cursor-pointer hover:translate-y-2 hover:transition hover:ease-in-out hover:shadow-purple-600 py-2'
                         >
                             Payment gateway
+                        </p>
+                        <p
+                            onClick={handleWeather}
+                            className='shadow-lg shadow-red-600 px-8 rounded-md hover:cursor-pointer hover:translate-y-2 hover:transition hover:ease-in-out hover:shadow-purple-600 py-2'
+                        >
+                            Check Weather
                         </p>
                     </div>
                 </div>
@@ -89,6 +101,11 @@ const Feature = () => {
             </Dialog>
             <Dialog open={localAuth} onClose={() => setLocAuth(false)}>
                 <LocalAuth setLocAuth={setLocAuth} />
+            </Dialog>
+            <Dialog open = {weather} onClose={()=>setWeather(false)} className='bg-transparent'>
+                
+                <Weather/>
+              
             </Dialog>
             
         </>
