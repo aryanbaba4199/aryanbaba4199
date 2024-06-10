@@ -1,0 +1,48 @@
+.letter {
+    display: inline-block;
+    transition: all 0.2s ease-in-out;
+    
+  }
+  
+  .letter:hover {
+    color: black !important;
+    text-shadow: 0 0 20px white;
+    transform: scale(1.2);
+    cursor: pointer;
+  }
+  .letter:active {
+    transform: translateY(50px) !important;
+    animation: ease-in-out;
+    animation: alternate-reverse;
+  }
+  
+  .animatedText {
+    display: flex;
+  }
+  
+  /* Additional CSS for animations if needed */
+  .letter {
+    animation: float 1.5s ease-in-out infinite;
+  }
+  
+  @keyframes float {
+    0%, 100% {
+      transform: translateY(0);
+      animation: ease-in-out;
+    
+    }
+    25%{
+      animation: ease-in-out;
+      
+    }
+    50% {
+      transform: translateY(-10px);
+      animation: ease-in-out;
+      
+    }
+    75%{
+      animation: ease-in-out;
+ 
+    }
+  }
+  

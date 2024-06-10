@@ -185,3 +185,32 @@ label {
 .form button:hover {
   background-color: #6d44b8;
 }
+
+.letter {
+  display: inline-block;
+  transition: all 0.2s ease-in-out;
+}
+
+.letter:hover {
+  color: red;
+  text-shadow: 0 0 10px red;
+  transform: scale(1.2);
+}
+
+.animatedText {
+  display: flex;
+}
+
+/* Additional CSS for animations if needed */
+.letter {
+  animation: float 1.2s ease-in-out infinite;
+}
+
+@keyframes float {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-10px);
+  }
+}

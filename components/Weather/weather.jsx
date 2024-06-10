@@ -2,8 +2,8 @@ import React, { useState } from 'react';
 import { Box, Container, Grid, Link, SvgIcon, Typography } from '@mui/material';
 import Search from '@/components/weather/Search/Search';
 import WeeklyForecast from '@/components/weather/WeeklyForecast/WeeklyForecast';
-import TodayWeather from '@/components/weather/TodayWeather/TodayWeather';
-import UTCDatetime from '../weather/Reusable/UTCDatetime';
+import TodayWeather from '@/components/Weather/TodayWeather/TodayWeather';
+import UTCDatetime from './Reusable/UTCDatetime';
 import { fetchWeatherData } from '@/utils/utilities/weatherFunction';
 import { transformDateFormat } from '@/utils/utilities/DatetimeUtils';
 
@@ -12,10 +12,10 @@ import { transformDateFormat } from '@/utils/utilities/DatetimeUtils';
 import LoadingBox from '@/components/weather/Reusable/LoadingBox';
 
 import { ReactComponent as SplashIcon } from '@/public/assets/splash-icon.svg';
-import Logo from '@/public/assets/logo.png';
+
 import ErrorBox from '@/components/weather/Reusable/ErrorBox';
 import { ALL_DESCRIPTIONS } from '@/utils/utilities/DateConstants';
-import GitHubIcon from '@mui/icons-material/GitHub';
+
 import { getTodayForecastWeather, getWeekForecastWeather } from '@/utils/utilities/DataUtils';
 
 const weather = () => {
@@ -90,6 +90,7 @@ const weather = () => {
           margin: '2rem 0',
           maxWidth: '80%',
           lineHeight: '22px',
+          color: 'white'
         }}
       >
         Explore current weather data and 6-day forecast of more than 200,000
@@ -183,7 +184,7 @@ const weather = () => {
               marginBottom: '1rem',
             }}
           >
-            <p className='font-semibold text-2xl'>Check Weather</p>
+            <p className='font-semibold text-2xl  text-white font-serif'>Check Weather</p>
            
 
             <UTCDatetime />

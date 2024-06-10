@@ -1,6 +1,6 @@
 import { Box, Typography } from '@mui/material';
 import React from 'react';
-import { weatherIcon } from '@/utils/utilities/IconsUtils';
+
 
 const DailyForecastItem = (props) => {
   console.log(props)

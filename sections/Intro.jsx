@@ -1,106 +1,110 @@
 "use client";
-import React, { Fragment, useEffect, useRef, useState } from "react";
-import Head from "next/head";
+import React, { useEffect } from "react";
+import Image from "next/image";
+import AOS from "aos";
+import "aos/dist/aos.css";
+import styles from "../styles/style.module.css"; // importing the CSS module
 import Link from "next/link";
 
-
 const Intro = () => {
-  const [isHome, setIsHome] = useState(false);
-
-  const homeRef = useRef();
-  const introRef = useRef();
-  const profileRef = useRef();
-
-  // Intersection observer animation on scroll
   useEffect(() => {
-    const getScreenWidth = () =>
-      window.innerWidth ||
-      document.documentElement.clientWidth ||
-      document.body.clientWidth;
+    AOS.init({
+      duration: 1000,
+    });
+  }, []);
 
-    // Scroll Animation
-    if (homeRef.current) {
-      const homeObserver = new IntersectionObserver(
-        ([homeEntry]) => {
-          setIsHome(homeEntry.isIntersecting);
-        },
-        {
-          rootMargin: `${getScreenWidth() <= 700 ? "-100px" : "-300px"}`,
-        }
-      );
-
-      homeObserver.observe(homeRef.current);
-
-      if (isHome) {
-        profileRef.current.classList.add("slide-in");
-        introRef.current.classList.add("slide-in");
-      } else {
-        profileRef.current.classList.remove("slide-in");
-        introRef.current.classList.remove("slide-in");
-      }
-    }
-  }, [homeRef, isHome]);
+  const letters = "Full".split("");
+  const stack = "Stack".split("");
+  const developer = "Developer".split("");
+  const slash = "|".split("");
 
   return (
-    <Fragment>
-      <Head>
-        <title>Raushan&apos;s Portfolio</title>
-      </Head>
-      <section id='home'>
-        <div
-          className='min-h-[100vh] overflow-x-hidden px-[20px] md:px-[200px] lg:px-[200px] pt-[80px] md:pt-0 md:flex items-center justify-between shadow-zinc-300 dark:shadow-zinc-700 shadow-sm'
-          ref={homeRef}
+    <div className="flex justify-between items-center h-screen md:mx-16 px-4 gap-16 w-[100%] flex-wrap">
+      <div data-aos="fade-right" data-aos-duration="300" className="md:w-[50%] w-[100%]">
+        <h2
+          data-aos="fade-up"
+          data-aos-delay="300"
+          className="md:text-3xl text-xl font-semibold font-serif "
         >
+          Hi there
+        </h2>
+        <p data-aos = 'fade-up' data-aos-duration = '500' className=" mt-8 md:text-4xl text-2xl font-serif mb-4">I am a </p>
+        <div className="flex justify-center md:gap-8 gap-4">
           <div
-            className='translate-x-[-500px] transition-all duration-700 opacity-0'
-            ref={introRef}
+            className={`md:text-5xl text-2xl font-semibold font-serif md:ml-32  ${styles.animatedText}`}
           >
-            <p className='py-2 text-2xl md:text-4xl font-semibold font-sans'>
-              Hi There !
-            </p>
-            {/* Profile Name */}
-            <p className='text-2xl md:text-4xl py-2 font-semibold font-sans'>
-              I&apos;m a full stack
-              <span className='text-[#c72c6c] dark:text-[#07d0e5]'>
-                {" "}
-                developer <span className='text-white'>|</span>
+            {letters.map((letter, index) => (
+              <span key={index} className={styles.letter} data-aos = 'fade-up' data-aos-duration = '1000'>
+                {letter}
               </span>
-            </p>
-            <div className="w-[50%]">
-            <p>Highly motivated Full-Stack Developer ( MERN Stack Developer ) with 3+ years of experience.</p>
-            <p></p>
-            </div>
-            <div className='mt-5 md:mt-10 flex gap-3'>
-              {/* Hire Me Button */}
-              <Link
-                className='text-white text-xl font-semibold rounded bg-red-400 hover:bg-red-500 px-2 py-1'
-                href={"#getInTouch"}
-              >
-                Hire me
-              </Link>
-              {/* Download CV Button */}
-              <Link
-                className='text-xl font-semibold rounded border border-red-500 hover:text-white hover:bg-red-500 px-2 py-1'
-                href='https://ninjasfiles.s3.amazonaws.com/MagicalCV__4_%20(2).pdf_562bd8221e138eb05f6917424e34057a/MagicalCV__4_%20(2).pdf'
-                target='_blank'
-              >
-                Download CV
-              </Link>
-            </div>
+            ))}
           </div>
 
-          {/* Image */}
-          <div
-            className={
-              "translate-x-[500px] transition-all opacity-0 duration-700 w-[180px] h-[300px] md:w-[240px] md:h-[400px] bg-cover m-auto md:m-0 mt-[40px] md:mt-0 bg-no-repeat"
-            }
-            ref={profileRef}
-            style={{ backgroundImage: "url(/images/male.png)" }}
-          />
+          <h3 data-aos="fade-up" data-aos-delay="2000">
+            {" "}
+            <div
+              className={`md:text-5xl text-2xl font-semibold font-serif  ${styles.animatedText}`}
+            >
+              {stack.map((letter, index) => (
+                <span key={index} className={styles.letter}>
+                  {letter}
+                </span>
+              ))}
+            </div>
+          </h3>
+
+          <h3 data-aos="fade-up" data-aos-delay="2000">
+            {" "}
+            <div
+              className={`md:text-5xl text-2xl font-semibold font-serif ${styles.animatedText}`}
+            >
+              {developer.map((letter, index) => (
+                <span key={index} className={styles.letter}>
+                  <p className="text-cyan-400 hover:text-white">
+                    {letter}
+                  </p>
+                </span>
+              ))}
+            </div>
+          </h3>
+
+          <h3 data-aos="fade-up" data-aos-delay="2000">
+            {" "}
+            <div
+              className={`md:text-5xl text-2xl font-semibold font-serif ${styles.animatedText}`}
+            >
+              {slash.map((letter, index) => (
+                <span key={index} className={styles.letter}>
+                  <p className="text-cyan-400 hover:text-white hover:shadow hover:">
+                    {letter}
+                  </p>
+                </span>
+              ))}
+            </div>
+          </h3>
         </div>
-      </section>
+        <p className="font-serif mt-4" data-aos='fade-up' data-aos-duration = '1500'>
+          Highly motivated Full-Stack Developer with 2+ years of experience
+          building web applications using the MERN stack (MongoDB, Express.js,
+          React, Node.js) and Next.js. I'm passionate about creating
+          user-friendly, performant, and scalable web experiences.
+        </p>
+        <div className="mt-16 flex justify-center gap-8" data-aos ='fade-up' data-aos-duration = '4000'>
+        <Link href="/#getInTouch" data-aos ='fade-up' data-aos-duration='1000' className="bg-cyan-600 px-8 py-2 font-semibold shadow-lg hover:shadow-red-600 rounded-lg hover:text-blue-600 hover:bg-white active:bg-green-600 active:text-white active:translate-y-1 hover:cursor-pointer">Hire Me </Link>
+        <Link  href = "https://drive.google.com/file/d/1yCCpn7uuFrwNpJb05q9cgkQ40MQR6IAY/view?usp=drive_link"data-aos ='fade-up' data-aos-duration='1000'  className="bg-blue-600 px-8 py-2 font-semibold shadow-lg hover:shadow-red-600 rounded-lg hover:text-blue-600 hover:bg-white active:bg-green-600 active:text-white active:translate-y-1 hover:cursor-pointer">Download CV </Link>
+      </div>
+      </div>
+      <div className="md:block hidden">
+        <Image
+          data-aos="fade-left"
+          data-aos-duration="1000"
+          src={"/images/male.png"}
+          width={200}
+          height={500}
+        />
+      </div>
       
-    </Fragment>
+    </div>
   );
 };
 
