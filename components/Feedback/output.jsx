@@ -37,25 +37,25 @@ const FeedbackSlider = () => {
   };
 
   return (
-    <div className="p-8 md:mx-8 mx-2 rounded-md px-24 bg-gray-800 mt-8 ">
-      <Slider {...settings}>
-        {data.map(({ _id, name, feedback, rating }) => (
-          <div key={_id} className="p-4">
-            <div className=" text-white p-6 rounded-lg shadow-md flex flex-col justify-center items-center">
-              <div className="mb-4">
-                <p className="font-semibold">{name}</p>
-              </div>
-              <div className="mb-4">
-                {[...Array(5)].map((_, index) => (
-                  <StarComponent key={index} filled={index < rating} />
-                ))}
-              </div>
-              <div className="text-gray-200 italic">{feedback}</div>
-            </div>
+    <div class="py-6 md:px-16 px-4 md:mx-8 mx-2 rounded-md bg-gradient-to-r from-purple-600 via-cyan-500 to-blue-600 filter mt-8 relative"> <Slider {...settings}>
+    {data.map(({ _id, name, feedback, rating }) => (
+      <div key={_id} class="p-4 shadow-2xl shadow-black">
+        <div class="bg-slate-900 text-white  p-6 rounded-lg shadow-lg shadow-black flex flex-col justify-center items-center">
+          <div class="mb-4">
+            <p class="font-semibold">{name}</p>
           </div>
-        ))}
-      </Slider>
-    </div>
+          <div class="mb-4">
+            {[...Array(5)].map((_, index) => (
+              <StarComponent key={index} filled={index < rating} />
+            ))}
+          </div>
+          <div class="text-gray-600 italic">{feedback}</div>
+        </div>
+      </div>
+    ))}
+  </Slider>
+  <div class="animate-spin absolute inset-70 filter backdrop-blur-4xl bg-gradient-to-r from-purple-600 via-cyan-500 to-blue-600 opacity-75 blur-2xl"></div> </div>
+
   );
 };
 

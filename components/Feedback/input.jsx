@@ -19,6 +19,9 @@ const input = () => {
         const res = await axios.post('/api/feedback/feedback', {name, rating, feedback});
         if(res){
             setOpen(true);
+            setRating(0);
+            setName("");
+            setFeedback("");
         }  
     }catch(e){
         console.error("Error submitting", e);
@@ -27,9 +30,9 @@ const input = () => {
 
   return (
     <div className="flex flex-col px-4 justify-center items-center w-[100%] mt-8">
-      <h2 className="text-2xl font-serif flex gap-2">
+      <h2 className="text-2xl font-serif flex md:flex-row flex-col gap-2">
         I hope you will understand the importance of
-        <p className="text-cyan-400">Feedback</p>
+        <p  className="text-cyan-400 md:text-start text-center">Feedback</p>
       </h2>
       <div className="flex py-1 rounded-sm mt-4 w-16 h-16 -translate-x-10">
           {Array.from({ length: 5 }, (v, idx) => idx + 1).map((star) => (
