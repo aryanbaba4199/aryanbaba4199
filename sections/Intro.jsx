@@ -19,7 +19,7 @@ const Intro = () => {
   const slash = "|".split("");
 
   return (
-    <div className="flex justify-between items-center h-screen md:mx-16 px-4 gap-16 w-[100%] flex-wrap">
+    <div className="flex justify-between items-center h-screen md:mx-16 px-4 gap-16 w-[90%] flex-wrap">
       <div data-aos="fade-right" data-aos-duration="300" className="md:w-[50%] w-[100%]">
         <h2
           data-aos="fade-up"

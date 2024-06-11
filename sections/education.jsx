@@ -35,15 +35,14 @@ const Education = () => {
       educationBoxesRef.current.classList.remove("pop-up-child");
     }
   }, [isEducation]);
-  
-  const linkBtn = (link) =>{
-    if(link){
-    router.push(link)
-    }else{
+
+  const linkBtn = (link) => {
+    if (link) {
+      router.push(link);
+    } else {
       console.log("Link not found");
     }
-  }
-
+  };
 
   return (
     <Fragment>
@@ -61,39 +60,35 @@ const Education = () => {
           ref={educationBoxesRef}
         >
           {EducationData.map((education) => (
-            <>
-            <div
-              className="transition-all duration-700 flex border border-zinc-300 dark:border-zinc-700 shadow-md shadow-zinc-300 dark:shadow-zinc-700 rounded gap-6"
-              key={education.name}
-            >
-              <img
-                alt={education.name}
-                className="hidden md:block bg-blue-400"
-                height={150}
-                src={education.image}
-                width={150}
-              />
-              <div className="flex flex-col gap-2 p-3 md:p-1">
-                <p className="text-xl md:text-2xl font-bold text-red-600">
-                  {education.name}
-                </p>
-                <p>{education.schoolOrCollege}</p>
-                <p className=" text-blue-600">
-                  {education.fromTo} &nbsp; | &nbsp;{" "}
-                  {education.statusOrPrecentage}
-                </p>
+            <Fragment key={education.name}>
+              <div
+                className="transition-all duration-700 flex border border-zinc-300 dark:border-zinc-700 shadow-md shadow-zinc-300 dark:shadow-zinc-700 rounded gap-6"
+              >
+                <img
+                  alt={education.name}
+                  className="hidden md:block bg-blue-400"
+                  height={150}
+                  src={education.image}
+                  width={150}
+                />
+                <div className="flex flex-col gap-2 p-3 md:p-1">
+                  <p className="text-xl md:text-2xl font-bold text-red-600">
+                    {education.name}
+                  </p>
+                  <p>{education.schoolOrCollege}</p>
+                  <p className=" text-blue-600">
+                    {education.fromTo} &nbsp; | &nbsp; 
+                    {education.statusOrPrecentage}
+                  </p>
+                </div>
+                <div className="float-right flex content-end">
+                  <text className=" text-right hover:cursor-pointer" onClick={() => linkBtn(education.link)}>Link</text>
+                </div>
               </div>
-              <div className="float-right flex content-end">
-              <text className=" text-right hover:cursor-pointer" onClick={()=>linkBtn(education.link)}>Link</text>
-            </div>
-              
-            </div>
-            
-            </>
+            </Fragment>
           ))}
         </div>
       </section>
-      
     </Fragment>
   );
 };

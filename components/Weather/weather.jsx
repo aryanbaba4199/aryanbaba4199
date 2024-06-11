@@ -1,19 +1,19 @@
 import React, { useState } from 'react';
 import { Box, Container, Grid, Link, SvgIcon, Typography } from '@mui/material';
 import Search from '@/components/weather/Search/Search';
-import WeeklyForecast from '@/components/weather/WeeklyForecast/WeeklyForecast';
-import TodayWeather from '@/components/Weather/TodayWeather/TodayWeather';
-import UTCDatetime from './Reusable/UTCDatetime';
+import WeeklyForecast from '@/components/Weather/WeeklyForecast/weeklyForecast';
+import TodayWeather from '@/components/Weather/TodayWeather/todayWeather';
+import UTCDatetime from './Reusable/uTCDatetime';
 import { fetchWeatherData } from '@/utils/utilities/weatherFunction';
 import { transformDateFormat } from '@/utils/utilities/DatetimeUtils';
 
 
 
-import LoadingBox from '@/components/weather/Reusable/LoadingBox';
+import LoadingBox from '@/components/Weather/Reusable/loadingBox';
 
 import { ReactComponent as SplashIcon } from '@/public/assets/splash-icon.svg';
 
-import ErrorBox from '@/components/weather/Reusable/ErrorBox';
+import ErrorBox from '@/components/Weather/Reusable/errorBox';
 import { ALL_DESCRIPTIONS } from '@/utils/utilities/DateConstants';
 
 import { getTodayForecastWeather, getWeekForecastWeather } from '@/utils/utilities/DataUtils';

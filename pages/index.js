@@ -6,6 +6,7 @@ import Education from "@/sections/education";
 import Experience from "@/sections/experience";
 import StarsCanvas from "@/components/starcanvas"
 import Features from "@/components/feature";
+import Feedback from "@/components/Feedback/feedback";
 
 const Navbar = dynamic(() => import("@/layout/navbar/Navbar"))
 const Footer = dynamic(() => import("@/layout/footer/Footer"))
@@ -76,6 +77,7 @@ const Home = () => {
           {/* LatestBlog */}
           <LatestBlogs />
           {/* Apps */}
+          <Feedback/>
           <Apps />
           {/* Send Mail */}
           <SendMail />

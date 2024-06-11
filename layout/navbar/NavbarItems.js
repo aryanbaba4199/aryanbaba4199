@@ -8,7 +8,7 @@ export const NavbarMenu = [
         link: "/#about",
     },
     {
-        name: "Tech Stack",
+        name: "Skills",
         link: "/#techStack",
     },
     {
@@ -27,8 +27,5 @@ export const NavbarMenu = [
         name : "Hire Me",
         link : "/#getInTouch"
     }, 
-    {
-        name : "Chatbot",
-        link : "/chatbot"
-    }
+    
 ];

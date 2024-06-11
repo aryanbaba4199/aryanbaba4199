@@ -1,8 +1,8 @@
 import { Grid } from '@mui/material';
 import React from 'react';
-import AirConditions from './AirConditions/AirConditions';
-import DailyForecast from './Forecast/DailyForecast';
-import Details from './Details/Details';
+import AirConditions from './AirConditions/airCondition';
+import DailyForecast from './Forecast/dailyForecast';
+import Details from './Details/details';
 
 const TodayWeather = ({ data, forecastList }) => {
   return (

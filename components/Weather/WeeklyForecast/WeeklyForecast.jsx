@@ -3,11 +3,11 @@ import { Grid } from '@mui/material';
 import { getWeekDays } from '@/utils/utilities/DatetimeUtils';
 import { weatherIcon } from '@/utils/utilities/IconsUtils';
 import WeeklyForecastItem from './WeeklyForecastItem';
-import ErrorBox from '../Reusable/ErrorBox';
+import ErrorBox from '../Reusable/errorBox';
 
-import UnfedForecastItem from './UnfedForecastItem';
-import DayWeatherDetails from './DayWeatherDetails';
-import Layout from '../Reusable/Layout';
+import UnfedForecastItem from './unfedForecastItem';
+import DayWeatherDetails from './dayWeatherDetails';
+import Layout from '../Reusable/layout';
 
 const WeeklyForecast = ({ data }) => {
   const forecastDays = getWeekDays();

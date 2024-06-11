@@ -2,11 +2,11 @@ import React from 'react';
 import { Grid } from '@mui/material';
 import { getDayMonthFromDate } from '@/utils/utilities/DatetimeUtils';
 import { weatherIcon } from '@/utils/utilities/IconsUtils';
-import ErrorBox from '../../Reusable/ErrorBox';
-import CityDateDetail from './CityDateDetail';
-import TemperatureWeatherDetail from './TemperatureWeatherDetail';
-import WeatherIconDetail from './WeatherIconDetail';
-import Layout from '../../Reusable/Layout';
+import ErrorBox from '../../Reusable/errorBox';
+import CityDateDetail from './cityDateDetail';
+import TemperatureWeatherDetail from './temperatureWeatherDetail';
+import WeatherIconDetail from './weatherIconDetail';
+import Layout from '../../Reusable/layout';
 
 const dayMonth = getDayMonthFromDate();
 
