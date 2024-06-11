@@ -37,11 +37,11 @@ const FeedbackSlider = () => {
   };
 
   return (
-    <div className="p-8 px-24 bg-gray-500 mt-8 ">
+    <div className="p-8 md:mx-8 mx-2 rounded-md px-24 bg-gray-800 mt-8 ">
       <Slider {...settings}>
         {data.map(({ _id, name, feedback, rating }) => (
           <div key={_id} className="p-4">
-            <div className=" bg-slate-900 text-white p-6 rounded-lg shadow-md flex flex-col justify-center items-center">
+            <div className=" text-white p-6 rounded-lg shadow-md flex flex-col justify-center items-center">
               <div className="mb-4">
                 <p className="font-semibold">{name}</p>
               </div>
@@ -50,7 +50,7 @@ const FeedbackSlider = () => {
                   <StarComponent key={index} filled={index < rating} />
                 ))}
               </div>
-              <div className="text-gray-600 italic">{feedback}</div>
+              <div className="text-gray-200 italic">{feedback}</div>
             </div>
           </div>
         ))}

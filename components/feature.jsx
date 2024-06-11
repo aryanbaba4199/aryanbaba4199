@@ -4,7 +4,7 @@ import LocalAuth from "./auth/localAuth";
 import FireAuth from "./auth/fireAuth";
 import SupaAuth from "./auth/supabaseAuth";
 import { useRouter } from "next/router";
-import Weather from "./Weather/weather";
+
 
 const Feature = () => {
   const router = useRouter();
@@ -33,14 +33,11 @@ const Feature = () => {
     setSupa(true);
   };
 
+  
+
   const handlePayment = async () => {
     router.push("https://razorpay.me/@stylers");
   };
-
-  const handleWeather = () => {
-    setWeather(true);
-  };
-
   return (
     <>
       <div className="flex flex-col justify-center items-center px-2 py-8 border mx-8">
@@ -61,12 +58,7 @@ const Feature = () => {
             >
               Payment gateway
             </p>
-            <p
-              onClick={handleWeather}
-              className="shadow-lg shadow-red-600 px-8 rounded-lg hover:cursor-pointer hover:translate-y-2 hover:transition hover:ease-in-out hover:shadow-purple-600 py-4 bg-slate-950"
-            >
-              Check Weather
-            </p>
+            
      
         </div>
       </div>
@@ -102,13 +94,7 @@ const Feature = () => {
       <Dialog open={localAuth} onClose={() => setLocAuth(false)}>
         <LocalAuth setLocAuth={setLocAuth} />
       </Dialog>
-      <Dialog
-        open={weather}
-        onClose={() => setWeather(false)}
-        className="bg-transparent"
-      >
-        <Weather />
-      </Dialog>
+      
     </>
   );
 };

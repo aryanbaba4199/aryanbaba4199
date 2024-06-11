@@ -101,6 +101,7 @@ const Intro = () => {
           src={"/images/male.png"}
           width={200}
           height={500}
+          alt="MERN Stack Developer"
         />
       </div>
       

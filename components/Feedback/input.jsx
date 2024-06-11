@@ -26,7 +26,7 @@ const input = () => {
   }
 
   return (
-    <div className="flex flex-col justify-center items-center w-[100%] mt-8">
+    <div className="flex flex-col px-4 justify-center items-center w-[100%] mt-8">
       <h2 className="text-2xl font-serif flex gap-2">
         I hope you will understand the importance of
         <p className="text-cyan-400">Feedback</p>
@@ -42,10 +42,10 @@ const input = () => {
             />
           ))}
         </div>
-      <div className="flex justify-center items-center gap-16">
+      <div className="flex md:flex-row flex-col justify-center items-center gap-16">
         <input
-          class="bg-zinc-200 text-zinc-600 font-mono ring-1 ring-zinc-400 focus:ring-2 focus:ring-rose-400 outline-none duration-300 placeholder:text-zinc-600 placeholder:opacity-50 rounded-full px-4 py-2 shadow-md focus:shadow-lg focus:shadow-rose-400 dark:shadow-md dark:shadow-purple-500"
-          autocomplete="off"
+          className="bg-zinc-200 text-zinc-600 font-mono ring-1 ring-zinc-400 focus:ring-2 focus:ring-rose-400 outline-none duration-300 placeholder:text-zinc-600 placeholder:opacity-50 rounded-full px-4 py-2 shadow-md focus:shadow-lg focus:shadow-rose-400 dark:shadow-md dark:shadow-purple-500"
+          
           placeholder="Enter Your Name..."
           name="text"
           value={name}
@@ -55,8 +55,8 @@ const input = () => {
         
 
         <input
-          class="bg-zinc-200 focus:w-96 text-zinc-600 font-mono ring-1 ring-zinc-400 focus:ring-2 focus:ring-rose-400 outline-none duration-300 placeholder:text-zinc-600 placeholder:opacity-50 rounded-full px-4 py-2 shadow-md focus:shadow-lg focus:shadow-rose-400 dark:shadow-md dark:shadow-purple-500"
-          autocomplete="off"
+          className="bg-zinc-200 focus:w-96 text-zinc-600 font-mono ring-1 ring-zinc-400 focus:ring-2 focus:ring-rose-400 outline-none duration-300 placeholder:text-zinc-600 placeholder:opacity-50 rounded-full px-4 py-2 shadow-md focus:shadow-lg focus:shadow-rose-400 dark:shadow-md dark:shadow-purple-500"
+          
           placeholder="Your Feedback"
           name="text"
           type="text"
