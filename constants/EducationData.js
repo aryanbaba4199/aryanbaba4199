@@ -63,4 +63,29 @@ export const EducationData = [
         statusOrPrecentage : "87%", 
         link : "https://ninjasfiles.s3.amazonaws.com/certificate311498012413bc896acd34ee698d170360537bd.pdf"
     },
+    {
+        name : "DevOps",
+        image : "https://contentmediasolution.com/wp-content/uploads/2022/02/Great-Learning.jpg",
+        schoolOrCollege: "Great Learning",
+        fromTo: "2024",
+        statusOrPrecentage : "97%",
+        link : "verify.mygreatlearning.com/KRUBZHGN"
+    },
+    {
+        name : "UI & UX",
+        image : "https://contentmediasolution.com/wp-content/uploads/2022/02/Great-Learning.jpg",
+        schoolOrCollege: "Great Learning",
+        fromTo: "2024",
+        statusOrPrecentage : "94%",
+        link : "verify.mygreatlearning.com/PFAWBWCC"
+    },
+    {
+        name : "ChatGPT for Coders",
+        image : "https://contentmediasolution.com/wp-content/uploads/2022/02/Great-Learning.jpg",
+        schoolOrCollege: "Great Learning",
+        fromTo: "2024",
+        statusOrPrecentage : "98%",
+        link : "verify.mygreatlearning.com/UMAOEKEU"
+    },
+
 ];

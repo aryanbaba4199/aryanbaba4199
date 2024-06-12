@@ -1,4 +1,5 @@
-import { Fragment } from "react";
+import { Fragment, useState } from "react";
+
 import Head from "next/head";
 import dynamic from "next/dynamic";
 import About from "@/sections/about";
@@ -7,11 +8,12 @@ import Experience from "@/sections/experience";
 import StarsCanvas from "@/components/starcanvas"
 import Features from "@/components/feature";
 import Feedback from "@/components/Feedback/feedback";
+import Skills from "@/sections/Skills";
 
 const Navbar = dynamic(() => import("@/layout/navbar/Navbar"))
 const Footer = dynamic(() => import("@/layout/footer/Footer"))
 const Intro = dynamic(() => import("@/sections/Intro"))
-const Skills = dynamic(() => import("@/sections/Skills"))
+
 const Projects = dynamic(() => import("@/sections/Projects"))
 const LatestBlogs = dynamic(() => import("@/sections/LatestBlogs"))
 const Apps = dynamic(() => import("@/sections/Apps"))
@@ -22,6 +24,10 @@ const ChatSystem = dynamic(() => import("@/utils/ChatSystem"))
 
 
 const Home = () => {
+
+  const [onePage, setOnePage] = useState(false);
+
+  
 
   return (
     <Fragment>

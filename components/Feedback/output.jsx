@@ -11,7 +11,7 @@ const StarComponent = ({ filled }) => (
 
 const FeedbackSlider = () => {
   const [data, setData] = useState([]);
-  console.log(data);
+
 
   useEffect(() => {
     const fetchData = async () => {

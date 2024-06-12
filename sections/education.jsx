@@ -67,9 +67,9 @@ const Education = () => {
                 <img
                   alt={education.name}
                   className="hidden md:block bg-blue-400"
-                  height={150}
+                  height={120}
                   src={education.image}
-                  width={150}
+                  width={120}
                 />
                 <div className="flex flex-col gap-2 p-3 md:p-1">
                   <p className="text-xl md:text-2xl font-bold text-red-600">
