@@ -84,9 +84,9 @@ const Intro = () => {
           </h3>
         </div>
         <p className="font-serif mt-4" data-aos='fade-up' data-aos-duration = '1500'>
-          Highly motivated Full-Stack Developer with 2+ years of experience
+          Highly motivated Full-Stack Developer with 3+ years of experience
           building web applications using the MERN stack (MongoDB, Express.js,
-          React, Node.js) and Next.js. I'm passionate about creating
+          React, Node.js) and Next.js.Over the Years i also gain my skills in React Native for Android and IOS development, i also have an experience in .net core framework and Java. Currently i am learning DevOps. I'm passionate about creating
           user-friendly, performant, and scalable web experiences.
         </p>
         <div className="mt-16 flex justify-center gap-8" data-aos ='fade-up' data-aos-duration = '4000'>

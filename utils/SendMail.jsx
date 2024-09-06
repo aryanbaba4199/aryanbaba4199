@@ -1,6 +1,7 @@
 import React, { Fragment, useState } from "react";
 import axios from "axios";
 import { FiMessageCircle } from "react-icons/fi";
+import Swal from "sweetalert2";
 
 const SendMail = () => {
   const [formData, setFormData] = useState({});
@@ -16,7 +17,12 @@ const SendMail = () => {
     const { name, email, message, subject } = formData;
 
     if (!name || !email || !subject || !message) {
-      return alert("Please Fill All Data");
+      Swal.fire({
+        title: "Warnings",
+        icon: "warning",
+        text: "All fields are required",
+      });
+      return;
     }
 
     setSending(true);
@@ -25,68 +31,77 @@ const SendMail = () => {
       .then((res) => {
         console.log(res.data);
         setSending(false);
-        alert("Message Sended Successfully");
+
+        Swal.fire({
+          title: "Sent",
+          icon: "success",
+          text: "Thanks for Inquiry, we will contact you soon ",
+        });
         setFormData({});
       })
       .catch((err) => {
         console.log(err);
         setSending(false);
-        alert(err);
+        Swal.fire({
+          title: "Error",
+          icon: "error",
+          text: err.message,
+        });
       });
   };
 
   return (
     <Fragment>
-      <section id='getInTouch'>
-        <div className='py-8 pt-4 shadow-zinc-300 dark:shadow-zinc-700 shadow-sm'>
-          <h3 className='text-3xl font-bold text-center pb-8 flex justify-center items-center gap-3'>
-            <span className='mr-3'>
+      <section id="getInTouch">
+        <div className="py-8 pt-4 shadow-zinc-300 dark:shadow-zinc-700 shadow-sm">
+          <h3 className="text-3xl font-bold text-center pb-8 flex justify-center items-center gap-3">
+            <span className="mr-3">
               <FiMessageCircle />
             </span>
             Drop A Message
           </h3>
 
-          <form action='' onSubmit={sendMessage}>
-            <div className='flex flex-col gap-4 w-[90%] md:w-[35%] m-auto'>
+          <form action="" onSubmit={sendMessage}>
+            <div className="flex flex-col gap-4 w-[90%] md:w-[35%] m-auto">
               <input
-                className='dark:bg-black border dark:border-[#07d0e5] border-[#c72c6c] p-2 rounded'
-                id='name'
-                name='name'
+                className="dark:bg-black border dark:border-[#07d0e5] border-[#c72c6c] p-2 rounded"
+                id="name"
+                name="name"
                 onChange={collectData}
-                placeholder='Your Good Name'
+                placeholder="Your Good Name"
                 value={formData.name || ""}
               />
               <input
-                className='dark:bg-black border dark:border-[#07d0e5] border-[#c72c6c] p-2 rounded'
-                id='email'
-                name='email'
+                className="dark:bg-black border dark:border-[#07d0e5] border-[#c72c6c] p-2 rounded"
+                id="email"
+                name="email"
                 onChange={collectData}
-                placeholder='Your Email Address'
+                placeholder="Your Email Address"
                 value={formData.email || ""}
               />
               <input
-                className='dark:bg-black border dark:border-[#07d0e5] border-[#c72c6c] p-2 rounded'
-                id='subject'
-                name='subject'
+                className="dark:bg-black border dark:border-[#07d0e5] border-[#c72c6c] p-2 rounded"
+                id="subject"
+                name="subject"
                 onChange={collectData}
-                placeholder='Subject for mail'
+                placeholder="Subject for mail"
                 value={formData.subject || ""}
               />
 
               <textarea
-                className='dark:bg-black border dark:border-[#07d0e5] border-[#c72c6c] p-2 rounded'
-                id='message'
-                name='message'
+                className="dark:bg-black border dark:border-[#07d0e5] border-[#c72c6c] p-2 rounded"
+                id="message"
+                name="message"
                 onChange={collectData}
-                placeholder='Write Your Message'
-                rows='3'
+                placeholder="Write Your Message"
+                rows="3"
                 value={formData.message || ""}
               />
 
               <button
-                className='font-bold text-white dark:bg-[#0ab0c2] disabled:cursor-default p-2 rounded dark:hover:bg-[#078795] bg-[#f91071] hover:bg-[#c72c6c]'
+                className="font-bold text-white dark:bg-[#0ab0c2] disabled:cursor-default p-2 rounded dark:hover:bg-[#078795] bg-[#f91071] hover:bg-[#c72c6c]"
                 disabled={sending}
-                type='submit'
+                type="submit"
               >
                 {sending ? "sending..." : "Send"}
               </button>
